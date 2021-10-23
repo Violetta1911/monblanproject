@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>monblanproject</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:ital,wght@0,500;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/libs.min.css" />
+		<link rel="stylesheet" href="css/style.min.css" />
+		<link
+			rel="stylesheet"
+			href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+		/>
+		<link rel="stylesheet" href="/resources/demos/style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header_wrapper">
+					<img class="header_logo" src="./images/logo.png" alt="logo" />
+					<div class="header_project-info">
+						<h1 class="title">monblanproject</h1>
+						<span class="start-date">start on 17.02.2016</span>
+
+						<ul class="social-info">
+							<li class="posts-qty"><strong>870</strong> posts</li>
+							<li><strong>11,787</strong> followers</li>
+							<li><strong>112</strong> following</li>
+						</ul>
+						<form class="date-picker">
+							<span>Date</span>
+							<label
+								><input type="text" class="datepicker" placeholder="from" />
+
+								<!-- <button class="icon-calendar datepicker"></button -->
+							</label>
+							<button class="icon-times"></button>
+							<label
+								><input type="text" class="datepicker" placeholder="to" />
+
+								<!-- <button class="icon-calendar datepicker"></button --> </label
+							><button class="icon-times"></button>
+						</form>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="posts">
+					<div class="posts_toggle">
+						<button class="btn">
+							<svg
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								width="28"
+								height="24"
+								viewBox="0 0 28 24"
+							>
+								<path
+									d="M8 19.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM8 11.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM18 19.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM8 3.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM18 11.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM28 19.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM18 3.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM28 11.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5zM28 3.5v3c0 0.828-0.672 1.5-1.5 1.5h-5c-0.828 0-1.5-0.672-1.5-1.5v-3c0-0.828 0.672-1.5 1.5-1.5h5c0.828 0 1.5 0.672 1.5 1.5z"
+								></path>
+							</svg>
+						</button>
+						<button class="btn active">
+							<svg
+								width="24"
+								height="22"
+								viewBox="0 0 24 22"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect width="6" height="6" />
+								<rect y="8" width="6" height="6" />
+								<rect y="16" width="6" height="6" />
+								<rect x="9" y="10" width="15" height="2" />
+								<rect x="9" y="18" width="15" height="2" />
+								<rect x="9" y="2" width="15" height="2" />
+							</svg>
+						</button>
+					</div>
+					<div class="posts_items">
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/photo_1.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/photo_2.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/photo_3.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/photo_1.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/photo_5.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/photo_6.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/photo_7.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="post">
+							<img
+								class="post_image"
+								src="./images/phot0_8.png"
+								alt="post image"
+							/>
+							<div class="post_info">
+								<div class="post_calendar-dates">
+									<div class="post_current-date">
+										<p>Today</p>
+										<p class="icons">
+											<span class="icon-heart">128</span>
+											<span class="icon-mode_comment">31</span>
+										</p>
+									</div>
+									<div class="post_chosed-date">
+										<p>9-08-2016</p>
+										<p class="icons">
+											<span class="icon-heart">61</span>
+											<span class="icon-mode_comment">22</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="post_upload-date">
+									<span>image upload</span>
+									<span class="date"> 11-04-2016</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="btn-load">Load more</button>
+				</div>
+			</main>
+
+			<footer class="footer"></footer>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

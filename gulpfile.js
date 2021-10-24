@@ -41,11 +41,7 @@ function styles() {
 }
 
 function scripts() {
-	return src([
-		'node_modules/normalize.css/normalize.css',
-		'node_modules/jquery/dist/jquery.js',
-		'docs/js/main.js',
-	])
+	return src(['node_modules/jquery/dist/jquery.js', 'docs/js/main.js'])
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.pipe(dest('docs/js'))

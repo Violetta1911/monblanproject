@@ -1,0 +1,16 @@
+$grey: rgba(146, 146, 146, 1);
+
+@mixin icon-style {
+	font-size: 14px;
+	line-height: 16px;
+	position: relative;
+	padding-left: 22px;
+}
+@mixin flex-space-between {
+	display: flex;
+	justify-content: space-between;
+}
+@mixin icon-style-before {
+	font-family: 'icomoon';
+	font-size: 15px;
+}

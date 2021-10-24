@@ -1,56 +1,8 @@
-@font-face {
-	font-family: 'icomoon';
-	src: url('../fonts/icomoon.eot?xd2ald');
-	src: url('../fonts/icomoon.eot?xd2ald#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?xd2ald') format('truetype'),
-		url('../fonts/icomoon.woff?xd2ald') format('woff'),
-		url('../fonts/icomoon.svg?xd2ald#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
-}
+@import '_global';
+@import '_fonts';
+@import '_vars';
+@import '_media';
 
-body {
-	box-sizing: border-box;
-	font-weight: 500;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	background: #e5e5e5;
-}
-main {
-	min-height: 100vh;
-	text-align: center;
-}
-ul {
-	list-style: none;
-}
-p,
-h1,
-h2,
-h3,
-ul {
-	padding: 0;
-	margin: 0;
-}
-button {
-	border: none;
-	padding: 0;
-	background-color: transparent;
-}
-.wrapper {
-	max-width: 1440px;
-	min-height: 100vh;
-	margin: 0 auto;
-	padding-bottom: 200px;
-	background-color: rgba(255, 255, 255, 0.87);
-	background-image: url('../images/bg_up.png');
-	background-size: unset;
-	background-repeat: no-repeat;
-	background-position-x: left;
-	background-position-y: top;
-	position: relative;
-	z-index: 100;
-}
 .header {
 	padding: 6px 10px 31px;
 	background-color: rgba(255, 255, 255, 0.67);
@@ -67,14 +19,13 @@ button {
 	&_wrapper {
 		display: flex;
 		justify-content: flex-start;
-		align-items: center;
+		width: 653px;
+		margin: 0 auto;
 	}
 	&_logo {
 		width: 138px;
 		height: 138px;
-		margin: 0 100px 0 365px;
-	}
-	&_project-info {
+		margin: 0 100px 0 0;
 	}
 }
 .social-info {
@@ -92,7 +43,7 @@ button {
 }
 .start-date {
 	padding: 6px 12px 7px;
-	border: 1px solid #3d8eda;
+	border: 1px solid;
 	border-radius: 2px;
 	font-size: 13px;
 	color: #3d8eda;
@@ -105,27 +56,36 @@ button {
 		border-radius: 4px;
 	}
 	input {
-		width: 110px;
+		width: 120px;
 		border: none;
 		outline: none;
 	}
+}
+.ui-datepicker-trigger {
+	position: relative;
+	top: 6px;
+	left: 3px;
+}
+.ui-datepicker {
+	width: 13em !important;
+	top: 142px !important;
 }
 .posts {
 	width: 836px;
 	margin: 0 auto;
 	padding: 18px;
+	text-align: center;
 	&_toggle {
 		display: flex;
 		justify-content: flex-end;
 		margin-bottom: 16px;
 		color: #3d8eda;
-		.btn {
+		.btn-toggle {
 			margin-left: 21px;
-			color: #3d8eda;
 			svg {
 				fill: rgba(200, 199, 199, 1);
 			}
-			&.active {
+			&.chosed {
 				svg {
 					fill: #3d8eda;
 				}
@@ -133,20 +93,20 @@ button {
 		}
 	}
 	&_items {
-		display: flex;
-		justify-content: space-between;
+		@include flex-space-between;
 		flex-wrap: wrap;
+		width: inherit;
+		margin: 0 auto;
 	}
 }
 
 .post {
 	width: 203px;
 	font-size: 14px;
-	font-weight: 500;
 	margin-bottom: 34px;
 
 	&_image {
-		width: 203px;
+		width: inherit;
 		height: 203px;
 	}
 	&_info {
@@ -154,16 +114,15 @@ button {
 		background-color: #ffffff;
 	}
 	&_calendar-dates {
-		display: flex;
-		justify-content: space-between;
+		@include flex-space-between;
 	}
 	&_current-date {
 		text-align: left;
 		margin-bottom: 9px;
 	}
 	&_upload-date {
-		display: flex;
-		justify-content: space-between;
+		@include flex-space-between;
+		flex-wrap: wrap;
 		margin-top: 25px;
 		align-items: center;
 		line-height: 14px;
@@ -175,61 +134,251 @@ button {
 		display: flex;
 		flex-direction: column;
 	}
-}
-.icon-heart {
-	font-size: 14px;
-	line-height: 16px;
-	position: relative;
-	display: inline-block;
-	margin: 8px 0;
-	padding-left: 22px;
-	&:before {
-		content: '\f004';
-		position: absolute;
-		top: 0px;
-		left: 0;
-		font-family: 'icomoon';
-		font-size: 15px;
-	}
-}
-.icon-mode_comment {
-	font-size: 14px;
-	line-height: 16px;
-	position: relative;
-	padding-left: 22px;
-	&:before {
-		content: '\e900';
-		font-family: 'icomoon';
-		font-size: 15px;
-		position: absolute;
-		top: 2px;
-		left: 0;
-	}
-}
-.btn-load {
-	padding: 8px 26px 7px;
-	border: 1px solid #929292;
-	border-radius: 14px;
-	text-transform: uppercase;
-	font-size: 13px;
-	color: rgba(146, 146, 146, 1);
-}
-.icon-times {
-	background: rgba(235, 235, 235, 1);
-	padding: 4px 5px 5px;
-	border: 1px solid rgba(222, 222, 222, 1);
-	position: relative;
-	right: 50px;
-	&:before {
-		content: '\f00d';
-		font-family: 'icomoon';
-		font-size: 15px;
-		color: rgba(95, 95, 95, 1);
+	&.chosed {
+		width: 100%;
+		display: flex;
+		margin-bottom: 8px;
+		font-weight: 500;
+		font-size: 16px;
+
+		.icons {
+			flex-direction: row;
+			align-items: center;
+			margin-top: 0px;
+		}
+		.icon-heart {
+			margin-right: 20px;
+		}
+		.post_image {
+			width: 86px;
+			height: 86px;
+		}
+		.post_info {
+			@include flex-space-between;
+			width: inherit;
+			align-items: baseline;
+			padding-left: 30px;
+		}
+		.post_calendar-dates {
+			width: 60%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.post_current-date,
+		.post_chosed-date {
+			text-align: left;
+			width: 110px;
+		}
+		.post_upload-date {
+			width: 100px;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			margin-right: 49px;
+			.date {
+				font-size: 16px;
+				display: block;
+				margin-top: 10px;
+			}
+		}
 	}
 }
 
-.ui-datepicker-trigger {
-	position: relative;
-	top: 6px;
-	left: 3px;
+@media (max-width: 1080px) {
+	.header {
+		padding: 10px;
+		&_logo {
+			width: 110px;
+			height: 110px;
+		}
+	}
+	.posts {
+		width: 70%;
+	}
+}
+@media (max-width: 1080px) {
+	.header {
+		padding: 10px;
+		&_logo {
+			width: 110px;
+			height: 110px;
+		}
+		&_wrapper {
+			justify-content: space-around;
+		}
+	}
+	.posts {
+		width: 80%;
+	}
+	.post_calendar-dates {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media (max-width: 962px) {
+	.post {
+		width: 160px;
+		&_image {
+			height: 160px;
+		}
+		&_upload-date {
+			margin-top: 5px;
+		}
+		.date {
+			margin-top: 5px;
+		}
+		&.choosed {
+			.post_info {
+				padding: 0 10px 0 20px;
+			}
+		}
+	}
+}
+@media (max-width: 860px) {
+	body {
+		font-size: 14px;
+	}
+	.wrapper {
+		background-size: 55%;
+	}
+	.header {
+		.title {
+			font-size: 20px;
+		}
+		&_wrapper {
+			justify-content: space-between;
+		}
+		&_logo {
+			width: 80px;
+			height: 80px;
+		}
+	}
+	.start-date {
+		padding: 3px;
+		font-size: 10px;
+	}
+	.social-info {
+		font-size: 12px;
+	}
+	.date-picker {
+		label {
+			padding: 3px;
+		}
+	}
+	.icon-times {
+		padding: 1px 3px;
+	}
+	.tile,
+	.list {
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	.post_upload-date {
+		justify-content: space-between;
+		font-size: 12px;
+		.date {
+			margin-top: 0;
+		}
+	}
+	.post_calendar-dates {
+		flex-direction: column;
+	}
+	.post {
+		text-align-last: left;
+		.icons {
+			@include flex-space-between;
+			flex-direction: row;
+			align-items: center;
+		}
+		&_info {
+			padding: 5px;
+		}
+		&.chosed {
+			.post_upload-date {
+				margin-right: 10px;
+				font-size: 16px;
+			}
+			.post_info {
+				justify-content: space-around;
+				padding: 0;
+			}
+			.post_current-date,
+			.post_chosed-date {
+				width: 180px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	}
+
+	.icon-heart::before,
+	.icon-mode_comment::before,
+	.icon-heart,
+	.icon-mode_comment {
+		font-size: 12px;
+	}
+}
+@media (max-width: 660px) {
+	.wrapper {
+		background-size: 55%;
+	}
+	.header {
+		&_wrapper {
+			width: 100%;
+			justify-content: flex-start;
+		}
+		&_logo {
+			margin-right: 30px;
+		}
+	}
+	.posts {
+		width: 95%;
+		padding: 20px;
+		&_toggle {
+			padding-right: 20px;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.wrapper {
+		background-size: 100%;
+	}
+
+	.start-date {
+		display: block;
+		width: 100px;
+		margin-bottom: 10px;
+	}
+	.post {
+		&.chosed {
+			.post_info {
+				flex-direction: column;
+				justify-content: start;
+				font-size: 12px;
+				padding-left: 10px;
+			}
+			.post_current-date {
+				margin-bottom: 0;
+			}
+			.post_current-date,
+			.post_chosed-date {
+				width: 180px;
+				@include flex-space-between;
+				align-items: center;
+			}
+			.post_upload-date {
+				flex-direction: row;
+				@include flex-space-between;
+				font-size: 12px;
+				width: 180px;
+				.date {
+					font-size: 12px;
+					margin: 0 0 0 10px;
+				}
+			}
+		}
+	}
 }

@@ -36,16 +36,18 @@
 						<form class="date-picker">
 							<span>Date</span>
 							<label
-								><input type="text" class="datepicker" placeholder="from" />
-
-								<!-- <button class="icon-calendar datepicker"></button -->
+								><input
+									id="to"
+									type="text"
+									class="datepicker"
+									placeholder="from"
+								/>
 							</label>
-							<button class="icon-times"></button>
+							<button id="btn-close" class="icon-times"></button>
 							<label
 								><input type="text" class="datepicker" placeholder="to" />
-
-								<!-- <button class="icon-calendar datepicker"></button --> </label
-							><button class="icon-times"></button>
+							</label>
+							<button id="btn-close" class="icon-times"></button>
 						</form>
 					</div>
 				</div>
@@ -53,7 +55,7 @@
 			<main>
 				<div class="posts">
 					<div class="posts_toggle">
-						<button class="btn">
+						<button class="btn-toggle tile">
 							<svg
 								version="1.1"
 								xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +68,7 @@
 								></path>
 							</svg>
 						</button>
-						<button class="btn active">
+						<button class="btn-toggle chosed list">
 							<svg
 								width="24"
 								height="22"
@@ -324,11 +326,10 @@
 							</div>
 						</div>
 					</div>
+
 					<button class="btn-load">Load more</button>
 				</div>
 			</main>
-
-			<footer class="footer"></footer>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>

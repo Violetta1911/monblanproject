@@ -1,0 +1,86 @@
+@import '_vars';
+body {
+	box-sizing: border-box;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: #e5e5e5;
+}
+
+main {
+	text-align: center;
+}
+ul {
+	list-style: none;
+}
+p,
+h1,
+h2,
+h3,
+ul {
+	padding: 0;
+	margin: 0;
+}
+button {
+	border: none;
+	padding: 0;
+	background-color: transparent;
+}
+.wrapper {
+	max-width: 1440px;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding-bottom: 200px;
+	background-color: rgba(255, 255, 255, 0.87);
+	background-image: url('../images/bg_up.png');
+	background-size: 43%;
+	background-repeat: no-repeat;
+	background-position-x: left;
+	background-position-y: top;
+	position: relative;
+	z-index: 100;
+}
+.icon-heart {
+	@include icon-style;
+	display: inline-block;
+	margin: 8px 0;
+	&:before {
+		@include icon-style-before;
+		content: '\f004';
+		position: absolute;
+		top: 0px;
+		left: 0;
+	}
+}
+.icon-mode_comment {
+	@include icon-style;
+	&:before {
+		@include icon-style-before;
+		content: '\e900';
+		position: absolute;
+		top: 2px;
+		left: 0;
+	}
+}
+.icon-times {
+	background: rgba(235, 235, 235, 1);
+	padding: 4px 5px 5px;
+	border: 1px solid rgba(222, 222, 222, 1);
+	position: relative;
+	right: 50px;
+	&:before {
+		content: '\f00d';
+		@include icon-style-before;
+		color: rgba(95, 95, 95, 1);
+	}
+}
+
+.btn-load {
+	padding: 8px 26px 7px;
+	border: 1px solid;
+	border-radius: 14px;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: grey;
+	margin-top: 16px;
+}

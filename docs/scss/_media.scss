@@ -1,0 +1,12 @@
+@media (max-width: 1080px) {
+	.header {
+		padding: 0px 10px;
+		&_logo {
+			width: 110px;
+			height: 110px;
+		}
+	}
+	.posts {
+		width: 95%;
+	}
+}

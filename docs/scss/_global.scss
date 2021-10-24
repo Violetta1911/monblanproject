@@ -9,7 +9,15 @@ body {
 
 main {
 	text-align: center;
+	background-image: url('../images/Vector\ 2.png');
+	background-size: 10%;
+	background-repeat: no-repeat;
+	background-position-x: right;
+	background-position-y: bottom;
+	position: relative;
+	z-index: 100;
 }
+
 ul {
 	list-style: none;
 }
